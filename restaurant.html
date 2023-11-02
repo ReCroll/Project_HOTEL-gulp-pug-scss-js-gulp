@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reikartz REASTAURANT</title>
-    <link rel="stylesheet" href="./css/style.min.css?_v=20231030141222">
+    <link rel="stylesheet" href="./css/style.min.css?_v=20231102122848">
   </head>
   <body> 
     <div class="wrapper">
@@ -183,10 +183,10 @@
                       modern restaurant, conference-hall, and art-bar.
                     </p>
                   </div>
-                  <div class="footer__email-wrapper restaurant">
-                    <input class="email__input" type="text" placeholder="EMAIL">
-                    <button class="email__submit" type="submit"></button>
-                  </div>
+                  <form class="footer__email-wrapper restaurant" id="form__email" action="" method="post">
+                    <input class="email__input req _email" type="text" name="email" placeholder="EMAIL">
+                    <button class="email__submit" type="submit" name="sab__email"></button>
+                  </form>
                 </div>
                 <div class="about__footer-column socials__footer">
                   <div class="about__footer-title">
@@ -274,7 +274,7 @@
             </div>
           </div>
         </div>
-        <div class="popup none__class" id="popup-message">
+        <div class="popup none__class popup-message" id="popup-message">
           <div class="popup__body">
             <div class="popup__content">
               <div class="close__btn close-popup">
@@ -282,6 +282,39 @@
               </div>
               <h3>Будьте ласкаві, оберіть дати <br> заселення та виселення</h3>
               <p>Прогляньте наші номери<br>та оберіть той який підходитиме саме Вам</p>
+            </div>
+          </div>
+        </div>
+        <div class="popup none__class popup-message" id="popupFormSuccess">
+          <div class="popup__body">
+            <div class="popup__content">
+              <div class="close__btn close-popup">
+                <div class="close__btn-icon"> <span> </span><span> </span></div>
+              </div>
+              <h3>Все складається добре</h3>
+              <p>Ми надішлемо на Вашу адресу новини про знижки та акції</p>
+            </div>
+          </div>
+        </div>
+        <div class="popup none__class popup-message" id="popupFormError">
+          <div class="popup__body">
+            <div class="popup__content">
+              <div class="close__btn close-popup">
+                <div class="close__btn-icon"> <span> </span><span> </span></div>
+              </div>
+              <h3>Сталась якась помилка з відправкою адреси</h3>
+              <p>Спробуйте будь ласка пізніше</p>
+            </div>
+          </div>
+        </div>
+        <div class="popup none__class popup-message" id="popupFormEmailWarning">
+          <div class="popup__body">
+            <div class="popup__content">
+              <div class="close__btn close-popup">
+                <div class="close__btn-icon"> <span> </span><span> </span></div>
+              </div>
+              <h3>Будьте ласкаві</h3>
+              <p>Перегляньте чи правильно Ви вказали свою пошту</p>
             </div>
           </div>
         </div>
@@ -293,6 +326,6 @@
           </div></a>
       </main>
     </div>
-    <script src="./js/app.min.js?_v=20231030141222"></script>
+    <script src="./js/app.min.js?_v=20231102122848"></script>
   </body>
 </html>
