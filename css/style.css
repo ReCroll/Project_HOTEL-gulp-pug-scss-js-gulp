@@ -2069,17 +2069,19 @@ input {
   position: relative;
   left: 0;
   top: -1.4375rem;
-  background-color: #ebebeb;
   display: grid;
   grid-template-columns: repeat(6, auto);
   gap: 5px;
   border-radius: 20px;
+  height: 99px;
+  transition: height 0.6s ease 0s;
 }
 
 .month-list > div {
   display: grid;
   place-content: center;
   margin: 5px 10px;
+  background-color: #ebebeb;
   transition: all 0.2s ease-in-out;
 }
 
@@ -2099,8 +2101,9 @@ input {
 .month-list.show {
   visibility: visible;
   pointer-events: visible;
-  transition: 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
   animation: to-left 0.71s forwards;
+  height: 198px;
 }
 
 .month-list.hideonce {
@@ -2109,7 +2112,6 @@ input {
 
 .month-list.hide {
   animation: to-right 1s forwards;
-  visibility: none;
   pointer-events: none;
 }
 
@@ -2144,14 +2146,14 @@ input {
   }
 
   100% {
-    transform: translatex(-150%);
+    transform: translatex(-130%);
     opacity: 1;
   }
 }
 
 @keyframes showtime {
   0% {
-    transform: translateX(250%);
+    transform: translateX(470%);
   }
 
   100% {
@@ -4398,6 +4400,12 @@ footer.restaurant h4 {
   }
 }
 
+@media (min-width: 51.25em) {
+  .month-list.show {
+    height: auto;
+  }
+}
+
 @media (min-width: 89.99875em) {
   .text {
     font-size: 1.125rem;
@@ -6083,7 +6091,7 @@ footer.restaurant h4 {
   }
 
   .date-time-formate {
-    top: 7.0625rem;
+    top: 4.0625rem;
   }
 
   .date-time-formate .date-time-value {
@@ -6099,6 +6107,10 @@ footer.restaurant h4 {
   [class*=__container] {
     max-width: none;
     padding: 0 0.625rem;
+  }
+
+  .header__menu::before {
+    height: 3.75rem;
   }
 
   .header {
@@ -6194,6 +6206,10 @@ footer.restaurant h4 {
 
   .check__list.banner .check-link {
     width: 100%;
+  }
+
+  .check__list.banner .check-in::before {
+    width: 0;
   }
 
   .main__info-button {
