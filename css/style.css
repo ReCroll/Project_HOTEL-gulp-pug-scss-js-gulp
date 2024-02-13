@@ -1025,6 +1025,20 @@ form.error {
   transition: 0.5s;
 }
 
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: #52695f;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #313F38;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
 *,
 *::before,
 *::after {
@@ -2728,12 +2742,12 @@ input {
   position: relative;
   width: calc(6.5625rem + 57 * (100vw - 63.99875rem) / 416);
   height: calc(6.5625rem + 57 * (100vw - 63.99875rem) / 416);
-  right: 50%;
+  right: 49%;
   max-width: 10.125rem;
   max-height: 10.125rem;
   min-width: 4.375rem;
   min-height: 4.375rem;
-  bottom: 0%;
+  bottom: 3%;
   transform: translate(50%, 0%);
 }
 
@@ -4819,19 +4833,7 @@ footer.restaurant h4 {
   }
 }
 
-@media (max-width: 1201.98px) {
-  .popup__content {
-    padding-top: calc(30px + 9 * (100vw - 320px) / 930);
-    padding-bottom: calc(30px + 9 * (100vw - 320px) / 930);
-  }
-}
-
 @media (max-width: 767.98px) {
-  .popup__content {
-    padding-right: calc(20px + 35 * (100vw - 320px) / 930);
-    padding-left: calc(25px + 35 * (100vw - 320px) / 930);
-  }
-
   .popup-message .popup__content {
     padding-right: 0.75rem;
     padding-left: 0.5rem;
@@ -4857,10 +4859,11 @@ footer.restaurant h4 {
   .popup__content {
     padding-top: 0;
     padding-bottom: 0;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg) scale(0.8);
   }
 
-  .popup__content .calendar {
-    transform: scale(0.8);
+  .popup.open .popup__content {
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg) scale(0.8);
   }
 
   .btn-top-wrapper {
