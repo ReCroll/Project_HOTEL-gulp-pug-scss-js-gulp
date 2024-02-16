@@ -2227,7 +2227,7 @@ input {
 }
 
 .page__about::before {
-  width: 62.03125vw;
+  width: 63.03125vw;
   height: 1px;
   /* 1191/1920 */
   /* 1191/1920 */
@@ -2641,7 +2641,6 @@ input {
 
 .swiper-slide {
   opacity: 0.15;
-  height: 85%;
   transition: all 0.3s ease 0s;
 }
 
@@ -2999,8 +2998,8 @@ input {
 .title__icon::after {
   content: "";
   position: absolute;
-  top: 30%;
-  left: 63%;
+  top: 20%;
+  left: 45%;
   width: 3.125rem;
   height: 3.125rem;
 }
@@ -4888,7 +4887,7 @@ footer.restaurant h4 {
   }
 
   .touch__head-title._big-title {
-    font-size: 4.0625rem;
+    font-size: 4rem;
   }
 }
 
@@ -4944,6 +4943,8 @@ footer.restaurant h4 {
     background-color: #313F38;
     padding-top: calc(3.125rem + 6.25rem);
     padding-bottom: 2.5rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
     transition: left 0.3s ease 0s;
     overflow: auto;
   }
@@ -4973,14 +4974,15 @@ footer.restaurant h4 {
     line-height: 1;
   }
 
-  .header__info-telephone::before {
+  .header__info-telephone::before,
+  .social__link-text p::before {
     content: "";
     position: absolute;
     width: 100%;
     left: 0;
     height: 0.0625rem;
     /* 1/16 */
-    bottom: -4px;
+    bottom: -3px;
     background-color: #FFFCF6;
     opacity: 0.2;
   }
@@ -4996,17 +4998,24 @@ footer.restaurant h4 {
 
   .header__info-social {
     display: flex;
-    -moz-column-gap: 2.5rem;
-         column-gap: 2.5rem;
+    -moz-column-gap: 1.5625rem;
+         column-gap: 1.5625rem;
   }
 
   .social__link-text p {
+    position: relative;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 200;
     font-size: 0.75em;
-    line-height: 1.66666667;
+    line-height: 1;
     /* 20/12 */
     text-transform: uppercase;
+    transition: opacity 0.3s ease 0s;
+  }
+
+  .social__link-text p:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease 0s;
   }
 
   .menu__body._active {
@@ -5309,7 +5318,7 @@ footer.restaurant h4 {
   }
 
   .touch__head-title._big-title {
-    font-size: calc(9.375rem + 100 * (100vw - 63.99875rem) / 416);
+    font-size: calc(8.375rem + 116 * (100vw - 63.99875rem) / 416);
   }
 
   .touch__title-wrapper h1:first-child {
@@ -5862,7 +5871,7 @@ footer.restaurant h4 {
   }
 
   .touch__head-title._big-title {
-    font-size: calc(4.0625rem + 85 * (100vw - 19.99875rem) / 704);
+    font-size: calc(64px + 70 * (100vw - 23.43625rem) / 649);
   }
 
   .touch__title-wrapper h1:first-child {
@@ -6233,7 +6242,7 @@ footer.restaurant h4 {
   }
 
   .page__about::before {
-    width: 55vw;
+    width: 53vw;
   }
 
   .about__contain-padding {
@@ -7034,7 +7043,7 @@ footer.restaurant h4 {
   }
 
   .touch__head-title._big-title {
-    font-size: 4.6875rem;
+    font-size: 4rem;
   }
 
   .touch__title-wrapper h1:first-child {
