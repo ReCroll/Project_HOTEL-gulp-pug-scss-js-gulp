@@ -1027,12 +1027,12 @@ form.error {
 
 ::-webkit-scrollbar-track {
   border-radius: 3px;
-  background-color: #52695f;
+  background-color: #313F38;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 3px;
-  background-color: #313F38;
+  background-color: #52695f;
 }
 
 ::-webkit-scrollbar {
@@ -4956,6 +4956,14 @@ footer.restaurant h4 {
     align-items: center;
   }
 
+  .header__info {
+    margin-top: 2.5rem;
+  }
+
+  .header__info:last-child {
+    margin-bottom: 3rem;
+  }
+
   .header__info-telephone:not(:last-child),
   .header__info-street:not(:last-child),
   .header__info-social:not(:last-child) {
@@ -5045,13 +5053,16 @@ footer.restaurant h4 {
   }
 
   .header__menu-list > li p {
-    margin: 0px 0px 2.5rem 0px;
     font-style: normal;
     font-weight: 400;
     font-size: 1.875rem;
     line-height: 1;
     text-transform: uppercase;
     color: #FFFCF6;
+  }
+
+  .header__menu-list > li:not(:last-child) p {
+    margin: 0px 0px 2.5rem 0px;
   }
 
   .header__menu-link p::before {
