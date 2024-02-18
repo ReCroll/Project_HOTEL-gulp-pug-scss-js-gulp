@@ -829,6 +829,7 @@ button.swiper-pagination-bullet {
   z-index: 11;
   opacity: 0;
   visibility: hidden;
+  overflow-y: auto;
   transition: all 0.8s ease 0s;
 }
 
@@ -840,7 +841,6 @@ button.swiper-pagination-bullet {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.8s ease 0s;
-  overflow-y: auto;
 }
 
 .popup__body {
@@ -880,6 +880,7 @@ button.swiper-pagination-bullet {
   font-weight: 400;
   font-size: 40px;
   line-height: 40px;
+  text-wrap: balance;
 }
 
 .popup-message .popup__content h3:not(:last-child) {
@@ -892,11 +893,12 @@ button.swiper-pagination-bullet {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
+  text-wrap: balance;
 }
 
 .popup-message .popup__content .close__btn {
-  right: 2.5rem;
-  top: 2.5rem;
+  right: 2rem;
+  top: 2rem;
 }
 
 .popup-message .popup__content .close__btn-icon {
@@ -905,7 +907,7 @@ button.swiper-pagination-bullet {
 }
 
 .popup-message .popup__content .close__btn-icon span {
-  width: 26px;
+  width: 55%;
 }
 
 .popup__content .close__btn {
@@ -4419,6 +4421,12 @@ footer.restaurant h4 {
   }
 }
 
+@media (min-width: 63.99875em) {
+  .popup-message .popup__content {
+    padding: 6.25rem 4.375rem 6.25rem 4.375rem;
+  }
+}
+
 @media (min-width: 89.99875em) {
   .text {
     font-size: 1.125rem;
@@ -4834,15 +4842,19 @@ footer.restaurant h4 {
 
 @media (max-width: 767.98px) {
   .popup-message .popup__content {
-    padding-right: 0.75rem;
-    padding-left: 0.5rem;
     margin-right: 1rem;
     margin-left: 1rem;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg) scale(1);
   }
 
   .popup-message .popup__content .close__btn {
-    top: 1.25rem;
-    right: 1.25rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .popup-message .popup__content .close__btn-icon {
+    width: 2.8125rem;
+    height: 2.8125rem;
   }
 
   .popup-message .popup__content h3 {
@@ -4859,6 +4871,10 @@ footer.restaurant h4 {
     padding-top: 0;
     padding-bottom: 0;
     transform: perspective(600px) translate(0px, -100%) rotateX(45deg) scale(0.8);
+  }
+
+  .popup-message.open .popup__content {
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg) scale(1) !important;
   }
 
   .popup.open .popup__content {
@@ -5554,6 +5570,20 @@ footer.restaurant h4 {
 }
 
 @media (max-width: 63.99875em) {
+  .popup-message .popup__content {
+    padding: calc(2.8125rem + 55 * (100vw - 19.99875rem) / 704) calc(1.5rem + 46 * (100vw - 19.99875rem) / 704) calc(2.8125rem + 55 * (100vw - 19.99875rem) / 704) calc(1.5rem + 46 * (100vw - 19.99875rem) / 704);
+  }
+
+  .popup-message .popup__content .close__btn {
+    top: calc(1rem + 16 * (100vw - 47.99875rem) / 256);
+    right: calc(1rem + 16 * (100vw - 47.99875rem) / 256);
+  }
+
+  .popup-message .popup__content .close__btn-icon {
+    width: calc(2.8125rem + 25 * (100vw - 47.99875rem) / 256);
+    height: calc(2.8125rem + 25 * (100vw - 47.99875rem) / 256);
+  }
+
   [class*=__container-small] {
     padding: 0em 0.625rem;
   }
