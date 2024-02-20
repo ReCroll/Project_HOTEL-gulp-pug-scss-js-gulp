@@ -2919,6 +2919,10 @@ input {
   color: #1B3B36;
 }
 
+.page__touch .button__big-yellow {
+  display: none;
+}
+
 .page__services {
   padding-top: calc(4.375rem + 130 * (100vw - 23.43625rem) / 1545.02);
   background-color: #FFFCF6;
@@ -4887,6 +4891,13 @@ footer.restaurant h4 {
   }
 }
 
+@media (max-width: 30em) {
+  .page__touch .button__big-yellow {
+    transform: scale(0.8);
+    transform-origin: left center;
+  }
+}
+
 @media (max-width: 20em) {
   .content__images-wrapper {
     flex: 0 0 9.375rem;
@@ -6521,6 +6532,29 @@ footer.restaurant h4 {
     bottom: -3.5625rem;
   }
 
+  .page__touch {
+    position: relative;
+  }
+
+  .page__touch .button__big-yellow {
+    display: block;
+    left: 0%;
+    top: 73%;
+  }
+
+  .page__touch .button__big-yellow p {
+    font-size: 1rem !important;
+  }
+
+  .page__touch .scroll__to-rooms {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
   .services__container {
     row-gap: calc(4.375rem + 30 * (100vw - 23.43625rem) / 393);
   }
@@ -6897,6 +6931,10 @@ footer.restaurant h4 {
 
   footer.restaurant {
     background-image: none;
+  }
+
+  .touch__title-wrapper {
+    padding-bottom: 9.375rem;
   }
 }
 
