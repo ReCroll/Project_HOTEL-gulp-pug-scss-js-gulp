@@ -4845,46 +4845,6 @@ footer.restaurant h4 {
 }
 
 @media (max-width: 767.98px) {
-  .popup-message .popup__content {
-    margin-right: 1rem;
-    margin-left: 1rem;
-    transform: perspective(600px) translate(0px, -100%) rotateX(45deg) scale(1);
-  }
-
-  .popup-message .popup__content .close__btn {
-    top: 1rem;
-    right: 1rem;
-  }
-
-  .popup-message .popup__content .close__btn-icon {
-    width: 2.8125rem;
-    height: 2.8125rem;
-  }
-
-  .popup-message .popup__content h3 {
-    font-size: calc(25px + 15 * (100vw - 320px) / 448);
-    line-height: 100%;
-  }
-
-  .popup-message .popup__content p {
-    font-size: calc(14px + 4 * (100vw - 320px) / 448);
-    line-height: 150%;
-  }
-
-  .popup__content {
-    padding-top: 0;
-    padding-bottom: 0;
-    transform: perspective(600px) translate(0px, -100%) rotateX(45deg) scale(0.8);
-  }
-
-  .popup-message.open .popup__content {
-    transform: perspective(600px) translate(0px, 0%) rotateX(0deg) scale(1) !important;
-  }
-
-  .popup.open .popup__content {
-    transform: perspective(600px) translate(0px, 0%) rotateX(0deg) scale(0.8);
-  }
-
   .btn-top-wrapper {
     right: 1.875rem;
     bottom: 1.875rem;
@@ -6168,6 +6128,46 @@ footer.restaurant h4 {
 }
 
 @media (max-width: 47.99875em) {
+  .popup-message .popup__content {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg) scale(1);
+  }
+
+  .popup-message .popup__content .close__btn {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .popup-message .popup__content .close__btn-icon {
+    width: 2.8125rem !important;
+    height: 2.8125rem !important;
+  }
+
+  .popup-message .popup__content h3 {
+    font-size: calc(25px + 15 * (100vw - 320px) / 448);
+    line-height: 100%;
+  }
+
+  .popup-message .popup__content p {
+    font-size: calc(14px + 4 * (100vw - 320px) / 448);
+    line-height: 150%;
+  }
+
+  .popup__content {
+    padding-top: 0;
+    padding-bottom: 0;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg) scale(0.8);
+  }
+
+  .popup-message.open .popup__content {
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg) scale(1) !important;
+  }
+
+  .popup.open .popup__content {
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg) scale(0.8);
+  }
+
   [class*=__container] {
     max-width: none;
     padding: 0 0.625rem;
