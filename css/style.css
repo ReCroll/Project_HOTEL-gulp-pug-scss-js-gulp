@@ -853,6 +853,7 @@ button.swiper-pagination-bullet {
 
 .popup__content {
   position: relative;
+  max-width: 57.125rem;
   color: rgb(0, 0, 0);
   transition: all 0.8s ease 0s;
   opacity: 0;
@@ -868,6 +869,7 @@ button.swiper-pagination-bullet {
 }
 
 .popup-message .popup__content {
+  max-width: 57.125rem;
   background: #FFFCF6;
   padding: 6.25rem calc(7.1875rem + 100 * (100vw - 63.99875rem) / 896) 6.25rem 4.375rem;
   margin-left: 2.5rem;
