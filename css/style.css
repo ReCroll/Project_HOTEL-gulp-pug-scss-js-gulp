@@ -1104,8 +1104,6 @@ h6 {
 
 .position__mode {
   position: relative;
-  right: 50%;
-  transform: translate(50%, 0%);
 }
 
 body._lock {
@@ -2732,10 +2730,11 @@ input {
 }
 
 .button__wrapper-transparent {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .button._transparent {
@@ -2743,12 +2742,13 @@ input {
   position: relative;
   width: calc(6.5625rem + 57 * (100vw - 63.99875rem) / 416);
   height: calc(6.5625rem + 57 * (100vw - 63.99875rem) / 416);
-  right: 49%;
+  right: 50%;
   max-width: 10.125rem;
   max-height: 10.125rem;
   min-width: 4.375rem;
   min-height: 4.375rem;
   bottom: 3%;
+  margin-left: 2px;
   transform: translate(50%, 0%);
 }
 
@@ -3907,7 +3907,8 @@ input {
   background: url(../img/icons/sinus_white.svg) no-repeat center/contain;
 }
 
-.date__hotel.rooms__page:not(:last-child) {
+.date__hotel.rooms__page:not(:last-child),
+.rooms__page-content-elem {
   margin-bottom: calc(4.375rem + 30 * (100vw - 89.99875rem) / 480);
 }
 
@@ -3962,7 +3963,7 @@ input {
 
 .rooms__pages-images img {
   position: absolute;
-  top: 0;
+  top: calc(0% - (9.375rem + 100 * (100vw - 89.99875rem) / 480));
   left: 0;
   width: 100%;
   height: 100%;
@@ -4731,7 +4732,8 @@ footer.restaurant h4 {
     padding-top: 18.75rem;
   }
 
-  .date__hotel.rooms__page:not(:last-child) {
+  .date__hotel.rooms__page:not(:last-child),
+  .rooms__page-content-elem {
     margin-bottom: 6.25rem;
   }
 
@@ -5365,7 +5367,8 @@ footer.restaurant h4 {
     padding-top: calc(12.5rem + 50 * (100vw - 63.99875rem) / 416);
   }
 
-  .date__hotel.rooms__page:not(:last-child) {
+  .date__hotel.rooms__page:not(:last-child),
+  .rooms__page-content-elem {
     margin-bottom: calc(3.125rem + 20 * (100vw - 63.99875rem) / 416);
   }
 
@@ -5406,6 +5409,10 @@ footer.restaurant h4 {
   .rooms__pages-name p {
     font-size: calc(1.25rem + 20 * (100vw - 63.99875rem) / 416);
     line-height: calc(1.5rem + 24 * (100vw - 63.99875rem) / 416);
+  }
+
+  .rooms__pages-images img {
+    top: 0;
   }
 
   .rooms__pages-name:not(:last-child) {
@@ -5569,6 +5576,14 @@ footer.restaurant h4 {
     /* 23/13 */
   }
 
+  .rooms-page__container-small.tablet__mode {
+    padding: 0;
+  }
+
+  .position__mode {
+    left: 0%;
+  }
+
   .main__title {
     flex: 0 0 52.688172043%;
   }
@@ -5714,6 +5729,11 @@ footer.restaurant h4 {
 
   .rooms__page-content .rooms__page-title-text p {
     max-width: 15.625rem;
+  }
+
+  .rooms__swipers-wrapper {
+    -moz-column-gap: 5%;
+         column-gap: 5%;
   }
 
   .big-text {
@@ -5931,7 +5951,8 @@ footer.restaurant h4 {
     padding-top: calc(4.375rem + 130 * (100vw - 23.43625rem) / 649);
   }
 
-  .date__hotel.rooms__page:not(:last-child) {
+  .date__hotel.rooms__page:not(:last-child),
+  .rooms__page-content-elem {
     margin-bottom: 3.125rem;
   }
 
@@ -6140,8 +6161,8 @@ footer.restaurant h4 {
   }
 
   .popup-message .popup__content .close__btn-icon {
-    width: 2.8125rem !important;
-    height: 2.8125rem !important;
+    width: 2.8125rem;
+    height: 2.8125rem;
   }
 
   .popup-message .popup__content h3 {
@@ -6750,7 +6771,8 @@ footer.restaurant h4 {
     opacity: 1;
   }
 
-  .date__hotel.rooms__page:not(:last-child) {
+  .date__hotel.rooms__page:not(:last-child),
+  .rooms__page-content-elem {
     margin-bottom: 0;
   }
 
@@ -6773,7 +6795,9 @@ footer.restaurant h4 {
 
   .rooms__pages-images img {
     overflow: visible;
-    left: -47%;
+    left: auto;
+    right: 0%;
+    width: auto;
     -o-object-fit: cover;
        object-fit: cover;
   }
