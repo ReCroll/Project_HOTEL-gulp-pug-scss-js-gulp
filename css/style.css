@@ -3311,22 +3311,26 @@ input {
 
 .best__container {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.best-container {
   height: 56.3602599814%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: calc(3.125rem + 50 * (100vw - 47.99875rem) / 1152.02) !important;
+  padding-top: calc(3.125rem + 50 * (100vw - 47.99875rem) / 1152.02);
 }
 
-.best__container.rooms__page {
+.best-container.rooms__page {
   padding-bottom: calc(6.25rem + 50 * (100vw - 47.99875rem) / 1152.02);
   padding-top: 3.125rem;
   left: 50%;
-  transform: translate(-50%, 0%);
+  height: 100%;
 }
 
 .title__bigger {
@@ -4625,7 +4629,7 @@ footer.restaurant h4 {
     justify-content: center;
   }
 
-  .best__container.rooms__page {
+  .best-container.rooms__page {
     padding-bottom: 9.375rem;
   }
 
@@ -4864,7 +4868,7 @@ footer.restaurant h4 {
     padding-top: 9.375rem;
   }
 
-  .best__container {
+  .best-container {
     padding-top: 4.375rem;
     padding-bottom: 4.375rem;
   }
@@ -5691,8 +5695,8 @@ footer.restaurant h4 {
   }
 
   .main__titles {
-    font-size: calc(3rem + 40 * (100vw - 23.43625rem) / 649);
-    line-height: calc(3rem + 20 * (100vw - 23.43625rem) / 649);
+    font-size: calc(2.8125rem + 55 * (100vw - 23.43625rem) / 649);
+    line-height: calc(3rem + 32 * (100vw - 23.43625rem) / 649);
   }
 
   .rooms__container {
@@ -5833,13 +5837,13 @@ footer.restaurant h4 {
     padding-top: calc(29.5625rem + 177 * (100vw - 23.43625rem) / 649);
   }
 
-  .best__container {
+  .best-container {
     padding-top: calc(3.125rem + 50 * (100vw - 47.99875rem) / 256);
   }
 
   .title__bigger {
-    font-size: calc(2.8125rem + 55 * (100vw - 19.99875rem) / 704);
-    line-height: calc(3.75rem + 20 * (100vw - 19.99875rem) / 704);
+    font-size: calc(2.8125rem + 55 * (100vw - 19.99875rem) / 649);
+    line-height: calc(3rem + 32 * (100vw - 19.99875rem) / 649);
   }
 
   .page__gallery {
@@ -6354,8 +6358,8 @@ footer.restaurant h4 {
 
   .about__contain-padding .about__column-1 .content__title-wrapper {
     position: relative;
-    width: 55%;
-    min-width: 15.625rem;
+    width: 40%;
+    min-width: 11.5625rem;
     top: 0;
     left: 0;
     transform: translate(0, 0);
@@ -6974,14 +6978,10 @@ footer.restaurant h4 {
     display: block;
   }
 
-  .best__container {
+  .best-container {
     height: 100%;
+    padding-top: 6.25rem;
     padding-bottom: calc(4.375rem + 80 * (100vw - 19.99875rem) / 448);
-  }
-
-  .best__head-title {
-    font-size: calc(3rem + 52 * (100vw - 23.4375rem) / 392);
-    line-height: calc(3rem + 82 * (100vw - 23.4375rem) / 392);
   }
 
   .best__text-wrapper {
@@ -6993,7 +6993,7 @@ footer.restaurant h4 {
     max-width: 13.0625rem;
   }
 
-  .best__container.rooms__page {
+  .best-container.rooms__page {
     padding-bottom: 6.25rem;
     padding-top: 6.25rem;
   }
@@ -7064,6 +7064,16 @@ footer.restaurant h4 {
   .content__title-mobile {
     flex: 0 1 6.25rem;
   }
+}
+
+@media (max-width: 23.4375em) {
+  .page__main.rooms__page {
+    margin-bottom: c;
+  }
+
+  .content__title-mobile {
+    flex: 0 1 6.25rem;
+  }
 
   .about__content {
     flex: 0 0 85%;
@@ -7074,18 +7084,8 @@ footer.restaurant h4 {
   }
 
   .main__titles {
-    font-size: 3rem !important;
-    line-height: 3rem !important;
-  }
-
-  .content__title-mobile {
-    flex: 0 1 6.25rem;
-  }
-}
-
-@media (max-width: 23.4375em) {
-  .page__main.rooms__page {
-    margin-bottom: c;
+    font-size: 2.8125rem;
+    line-height: 3rem;
   }
 }
 
